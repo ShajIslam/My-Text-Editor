@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Text Editor</title>
+    <link rel="stylesheet" href="editor.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/eba88e0fc7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+
+
+    <div class="editor-container">
+        <div id="col-container">
+            <div class="first-col">
+            <button id="bold-btn" 
+                    onclick="f1(this)"
+                    class="btn"
+            ><i class="fa-solid fa-bold"></i></button>          
+            <button id="italic-btn" 
+                    onclick="f2(this)"
+                    class="btn"
+            ><i class="fa-solid fa-italic"></i></button>         
+            <button id="underline-btn" 
+                    onclick="f3(this)"
+                    class="btn"
+            ><i class="fa-solid fa-underline"></i></button>
+            <div class="second-col">
+                <button class="align-btn"
+                        onclick="f4(this)"
+                        ><i class="fa-solid fa-align-left"></i>
+                </button>
+                <button class="align-btn" onclick="f5(this)"><i class="fa-solid fa-align-center"></i></button>
+              <button class="align-btn" onclick="f6(this)"><i class="fa-solid fa-align-right"></i></button>
+            </div>
+            <div class="third-col">
+               <input   type="number"
+                        id="font-size" 
+                        min="1" 
+                        max="100" 
+                        value="16"
+                        onchange="f7(this)">      
+               <input type="color" name="" id="color-field" onchange="f8(this)">
+            </div>
+        </div>
+        <br>
+        <div class="">
+            <textarea  id="textarea" placeholder="write your text here"></textarea>
+        </div>
+        
+    </div>
+    <script src="js/editor.js"></script>
 </body>
 </html>
